@@ -91,7 +91,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.to_s.capitalize}:"
     seasonal_holiday_hash.each do |holiday, supplies_array|
       if holiday.to_s.include?("_") == true
-        holiday_array = holiday.split("_")
+        holiday_array = holiday.split(_)
         capitalized_holiday_array = holiday_array.map { |word| word.capitalize }
         puts "  #{capitalized_holiday_array.join(" ")}: #{supplies_array.join(", ")}"
       else
